@@ -1,0 +1,12 @@
+@media (max-width:250px) {
+    .max-width-font{
+            font-size: 1.1rem;
+            line-height: 2rem;
+        }
+}
+
+.hoverHome button:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+    color: white;
+}
