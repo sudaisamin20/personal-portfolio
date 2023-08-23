@@ -1,12 +1,37 @@
-@media (max-width:250px) {
-    .max-width-font{
-            font-size: 1.1rem;
-            line-height: 2rem;
-        }
+/* .fa-bars {
+    transition: all 0.3s ease-in-out;
+}
+.fa-times {
+    transition: all 0.3s ease-in-out;
+} */
+.bars {
+    transition: all 0.3s ease-in-out;
+    animation-name: hamBurgerBars;
+    animation-duration: 0.6s;
+    /* left: 100%; */
 }
 
-.hoverHome button:hover {
-    transform: scale(1.1);
+@keyframes hamBurgerBars {
+    0%{
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.cancel {
     transition: all 0.3s ease-in-out;
-    color: white;
+    animation-name: hamBurgerCancel;
+    animation-duration: 0.6s;
+
+}
+
+@keyframes hamBurgerCancel {
+    100%{
+        width: 100%;
+    }
+    0% {
+        width: 0%;
+    }
 }

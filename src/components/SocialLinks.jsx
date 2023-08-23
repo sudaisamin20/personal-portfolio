@@ -3,8 +3,15 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import './Style.css'
+import Aos from 'aos';
+import "aos/dist/aos.css"
 
 const SocialLinks = () => {
+    Aos.init({
+        duration: 1200,
+        once: true,
+        easing: "ease-in-out"
+    })
     const Links = [
         {
             id: 1,
@@ -23,7 +30,7 @@ const SocialLinks = () => {
                     GitHub <FaGithub size={30} />
                 </>
             ),
-            href: 'http://github.com'
+            href: 'https://github.com/sudaisamin20'
         },
         {
             id: 3,
@@ -41,15 +48,15 @@ const SocialLinks = () => {
                     Resume <BsFillPersonLinesFill size={30} />
                 </>
             ),
-            href: 'http://linkedin.com',
+            href: 'not available yet',
             style: "rounded-br-md"
         }
     ]
     return (
-        <div className='hidden min-[1115px]:flex flex-col top-[35%] left-0 fixed'>
-            <ul>
+        <div className='hidden min-[1115px]:flex flex-col top-[35%] left-0 fixed' data-aos="fade-right">
+            <ul >
                 {Links.map(({id, child, href, style}) => {
-                            return <li key={id} className={`flex justify-between items-center w-40 h-14 px-4 ml-[-100px] ${style} hover:rounded-md hover:ml-[-10px] duration-300 ease-in-out bg-gray-500`}>
+                            return <li  key={id} className={`flex justify-between items-center w-40 h-14 px-4 ml-[-100px] ${style} hover:rounded-md hover:ml-[-10px] duration-300 ease-in-out bg-gray-500`}>
                     <a href={href} className='flex justify-between items-center w-full text-white' target='_blank' rel='noreferrer' >
                         {child}
                     </a>

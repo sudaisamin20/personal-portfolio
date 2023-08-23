@@ -1,22 +1,29 @@
 import React from 'react'
+import Aos from 'aos';
 
 const About = () => {
-  return (
-    <div name="about" className='w-full h-screen bg-gradient-to-b from-gray-900 to-black text-white'>
-        <div className='flex flex-col justify-center max-w-screen-lg p-4 w-full h-full mx-auto'>
-            <div className='pb-8'>
-                <h1 className='text-4xl font-bold inline border-b-4 border-gray-500'>About</h1>
+        Aos.init({
+            once: true,
+            duration: 1200,
+            easing: 'ease-in-out',
+        })
+        window.scrollTo(0, 0)
+    return (
+        <div name="about" className='w-full h-screen bg-gradient-to-b from-gray-900 to-black text-white'>
+            <div className='flex flex-col justify-center max-w-screen-lg p-4 w-full h-full mx-auto'>
+                        <div data-aos="fade-right" className='pb-8'>
+                            <h1 className='text-4xl font-bold inline border-b-4 border-gray-500'>About</h1>
+                        </div>
+                        <p data-aos="fade-up" className='text-lg sm:text-xl mt-10'>
+                            Hey there! I'm a full stack developer, and I absolutely love building things for the web. I'm like a digital architect – I specialize in making websites look and feel awesome using tools like React. I'm the person behind the scenes making sure that when you click a button or scroll down, everything works smoothly and looks great.
+                        </p>
+                <br />
+                        <p data-aos="fade-up" className='text-lg sm:text-xl'>
+                            While I'm really good at making websites look fantastic, I'm also no stranger to the technical stuff. I know my way around the backend too, which is like the engine of a car – it powers everything behind the scenes. So, whether it's creating eye-catching designs or making sure everything runs seamlessly, I've got you covered. I'm on a journey to keep learning and improving, so I can keep making websites that people love to use.
+                        </p>
             </div>
-            <p className='text-lg sm:text-xl mt-10'>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis saepe iure adipisci provident eum laboriosam! Vero ipsa eveniet minus saepe modi pariatur commodi eum obcaecati. Laborum possimus placeat nemo pariatur assumenda omnis officia nam at, obcaecati, molestiae voluptates id repellendus quo fugiat quaerat, eos aut iste fuga cumque eum dolor.
-            </p>
-            <br />
-            <p className='text-lg sm:text-xl'>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, numquam ut? Earum, doloremque. Ea soluta animi consectetur necessitatibus! Itaque sit non asperiores distinctio debitis iure corrupti, earum, explicabo iste sapiente repellendus. Optio neque quis alias labore quasi hic officiis consequuntur quidem voluptatum, doloribus quaerat, excepturi illo et tempore. Officiis, nemo.
-            </p>
         </div>
-    </div>
-  )
+    )
 }
 
 export default About
